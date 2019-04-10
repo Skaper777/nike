@@ -1,0 +1,31 @@
+.page-header {
+  position: relative;
+  background: linear-gradient(70deg, $grey 50%, $green 50%);
+
+  &__nav {
+    display: grid;
+    max-width: 1170px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &__logo {
+    position: relative;
+    padding-left: 50px;
+    color: $green;
+    font-size: 25px;
+    font-family: 'Ubuntu';
+
+    &::before {
+      content: url(../img/logo.png);
+      position: absolute;
+      width: 40px;
+      height: 36px;
+      left: 0;
+    }
+  }
+
+  &__menu {
+    z-index: 2;
+  }
+}

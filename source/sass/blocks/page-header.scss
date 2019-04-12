@@ -1,31 +1,58 @@
 .page-header {
   position: relative;
-  background: linear-gradient(70deg, $grey 50%, $green 50%);
+  background: linear-gradient(70deg, $grey 50%, $green-light 50%);
 
   &__nav {
     display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 1170px;
     margin: 0 auto;
+    padding:  62px 0;
     z-index: 2;
   }
 
   &__logo {
+    justify-self: start;
+    align-self: center;
     position: relative;
     padding-left: 50px;
     color: $green;
     font-size: 25px;
     font-family: 'Ubuntu';
+    transition: 0.2s;
+
+    span {
+      color: $black;
+      transition: 0.2s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+
+      span {
+        color: $green;
+      }
+    }
 
     &::before {
       content: url(../img/logo.png);
       position: absolute;
       width: 40px;
       height: 36px;
+      top: -3px;
       left: 0;
     }
   }
 
   &__menu {
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    justify-self: end;
+    grid-auto-flow: column;
     z-index: 2;
   }
 }

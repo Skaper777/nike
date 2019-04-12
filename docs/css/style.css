@@ -351,23 +351,104 @@ p {
   background: linear-gradient(70deg, #e9e9e9 50%, #82f4d3 50%); }
   .page-header__nav {
     display: grid;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 1170px;
     margin: 0 auto;
+    padding: 62px 0;
     z-index: 2; }
   .page-header__logo {
+    justify-self: start;
+    -ms-flex-item-align: center;
+        align-self: center;
     position: relative;
     padding-left: 50px;
-    color: #82f4d3;
+    color: #61e9c2;
     font-size: 25px;
-    font-family: 'Ubuntu'; }
+    font-family: 'Ubuntu';
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .page-header__logo span {
+      color: #363639;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+    .page-header__logo:hover, .page-header__logo:active, .page-header__logo:focus {
+      color: #363639; }
+      .page-header__logo:hover span, .page-header__logo:active span, .page-header__logo:focus span {
+        color: #61e9c2; }
     .page-header__logo::before {
       content: url(../img/logo.png);
       position: absolute;
       width: 40px;
       height: 36px;
+      top: -3px;
       left: 0; }
   .page-header__menu {
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: end;
+    justify-self: end;
+    grid-auto-flow: column;
     z-index: 2; }
+
+.submenu {
+  display: grid;
+  grid-column: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 9px;
+  height: 9px;
+  margin-left: 19px;
+  border: 2px solid black;
+  border-radius: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer; }
+  .submenu:hover, .submenu:active, .submenu:focus {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    border-color: white;
+    background: white; }
+  .submenu--active {
+    width: 51px;
+    height: 51px;
+    background: black; }
+    .submenu--active:hover, .submenu--active:active, .submenu--active:focus {
+      background: white;
+      border-color: white;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+      .submenu--active:hover .submenu-btn div, .submenu--active:active .submenu-btn div, .submenu--active:focus .submenu-btn div {
+        background: black; }
+    .submenu--active .submenu-btn {
+      opacity: 1;
+      width: 17px;
+      height: 14px;
+      left: calc(50% - 8.5px); }
+      .submenu--active .submenu-btn div {
+        background: white;
+        border-radius: 1px;
+        height: 2px;
+        margin-bottom: 3px;
+        -webkit-transition: 0.2s;
+        transition: 0.2s; }
+
+.submenu-btn {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+.submenu-list {
+  display: none; }
 
 /**
  * Swiper 4.4.6

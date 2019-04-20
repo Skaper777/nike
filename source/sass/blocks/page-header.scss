@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  padding: 62px 0;
   background: linear-gradient(70deg, $grey 50%, $green-light 50%);
 
   &__nav {
@@ -8,7 +9,7 @@
     grid-template-columns: repeat(2, 1fr);
     max-width: 1170px;
     margin: 0 auto;
-    padding:  62px 0;
+    margin-bottom: 95px;
     z-index: 2;
   }
 
@@ -50,9 +51,91 @@
   &__menu {
     display: grid;
     align-items: center;
-    justify-items: end;
     justify-self: end;
     grid-auto-flow: column;
     z-index: 2;
+  }
+
+  &__brand {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 150px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: $black;
+    line-height: 125px;
+  }
+
+  &__brand-link {
+    //display: block;
+    position: relative;
+    padding: 13px 25px;
+    margin-left: 82px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+    background: $green-light;
+    transition: 0.2s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 260px;
+      height: 54px;
+      left: -10px;
+      bottom: -10px;
+      border: 2px solid $green-light;
+      transition: 0.2s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: white;
+
+      &::after {
+        border-color: white;
+      }
+    }
+  }
+
+  &__slider {
+    display: none;
+    position: absolute;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 100px;
+    margin-right: 43px;
+  }
+
+  &__footer-text {
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+    color: $text-grey;
+
+    span {
+      max-width: 330px;
+      position: absolute;
+      transform: rotate(-90deg);
+      left: -125px;
+      top: -137px;
+    }
+  }
+
+  &__footer-social {
+    justify-self: end;
   }
 }

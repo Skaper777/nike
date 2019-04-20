@@ -454,7 +454,8 @@ p {
       left: -125px;
       top: -137px; }
   .page-header__footer-social {
-    justify-self: end; }
+    justify-self: end;
+    margin: 0; }
 
 .submenu {
   display: grid;

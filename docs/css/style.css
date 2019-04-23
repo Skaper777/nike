@@ -356,6 +356,9 @@ p {
   @media (max-width: 1100px) {
     .page-header {
       padding: 30px 0; } }
+  @media (max-width: 500px) {
+    .page-header {
+      padding: 15px 0; } }
   .page-header__nav {
     display: grid;
     -webkit-box-pack: justify;
@@ -439,6 +442,9 @@ p {
     @media (max-width: 1100px) {
       .page-header__brand {
         margin-bottom: 100px; } }
+    @media (max-width: 500px) {
+      .page-header__brand {
+        margin-bottom: 50px; } }
   .page-header__title {
     margin: 0;
     margin-bottom: 35px;
@@ -643,9 +649,9 @@ p {
       width: 450px; } }
   @media (max-width: 500px) {
     .main-slider__slide img {
-      width: 250px; }
+      width: 200px; }
     .main-slider__slide .main-slider__slide-small {
-      width: 350px; } }
+      width: 270px; } }
 
 /**
  * Swiper 4.4.6

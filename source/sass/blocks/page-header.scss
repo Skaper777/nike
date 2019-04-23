@@ -5,7 +5,10 @@
 
   @media (max-width: 1100px) {
     padding: 30px 0;
-    //background: linear-gradient(110deg, $grey 50%, $green-light 50%);
+  }
+
+  @media (max-width: 500px) {
+    padding: 15px 0;
   }
 
   &__nav {
@@ -109,6 +112,10 @@
 
     @media (max-width: 1100px) {
       margin-bottom: 100px;
+    }
+
+    @media (max-width: 500px) {
+      margin-bottom: 50px;
     }
   }
 

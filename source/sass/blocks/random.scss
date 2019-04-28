@@ -1,0 +1,33 @@
+.random {
+  display: grid;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 85px auto;
+}
+
+.random-image {
+  position: absolute;
+  left: -135px;
+  z-index: -1;
+}
+
+.random-textblock {
+  display: grid;
+  width: 652px;
+  padding: 177px 0;
+}
+
+.random-title {
+  max-width: 500px;
+}
+
+.random-text {
+  max-width: 490px;
+}
+
+.random-link {
+  justify-self: flex-end;
+}
+

@@ -305,7 +305,8 @@ html {
   overflow-x: hidden; }
 
 .page {
-  font-family: 'Poppins', Arial, sans-serif; }
+  font-family: 'Myriad Pro', Arial, sans-serif;
+  font-weight: 300; }
 
 ul {
   list-style: none;
@@ -342,6 +343,12 @@ p {
   src: url("../fonts/poppins/Poppins-Bold.woff"), url("../fonts/poppins/Poppins-Bold.ttf");
   font-style: normal;
   font-weight: 700; }
+
+@font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/cormorant/Cormorant-SemiBold.woff"), url("../fonts/cormorant/Cormorant-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600; }
 
 @font-face {
   font-family: "Roboto";
@@ -523,7 +530,7 @@ p {
         align-self: flex-end;
     font-size: 14px;
     line-height: 25px;
-    color: #8f8f8f; }
+    color: #888888; }
     .page-header__footer-text span {
       max-width: 330px;
       position: absolute;
@@ -652,6 +659,75 @@ p {
       width: 200px; }
     .main-slider__slide .main-slider__slide-small {
       width: 270px; } }
+
+.content-title {
+  font-family: 'Cormorant', Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  margin-bottom: 25px; }
+
+.content-text {
+  font-size: 15px;
+  color: #888888;
+  line-height: 30px;
+  margin-bottom: 35px; }
+
+.content-link {
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 145px;
+  padding: 13px 0;
+  font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #363639;
+  background: #82f4d3;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .content-link::before {
+    position: absolute;
+    content: "";
+    width: 145px;
+    height: 44px;
+    left: -10px;
+    top: -10px;
+    border: 1px solid #82f4d3;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    z-index: -1; }
+  .content-link:hover, .content-link:active, .content-link:focus {
+    background: white;
+    outline: 1px solid black; }
+    .content-link:hover::before, .content-link:active::before, .content-link:focus::before {
+      border-color: white; }
+
+.random {
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 85px auto; }
+
+.random-image {
+  position: absolute;
+  left: -135px;
+  z-index: -1; }
+
+.random-textblock {
+  display: grid;
+  width: 652px;
+  padding: 177px 0; }
+
+.random-title {
+  max-width: 500px; }
+
+.random-text {
+  max-width: 490px; }
+
+.random-link {
+  justify-self: flex-end; }
 
 /**
  * Swiper 4.4.6

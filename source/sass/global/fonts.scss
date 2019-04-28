@@ -31,6 +31,14 @@
 }
 
 @font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/cormorant/Cormorant-SemiBold.woff"),
+       url("../fonts/cormorant/Cormorant-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto/Roboto-Bold.woff"),
        url("../fonts/roboto/Roboto-Bold.ttf");

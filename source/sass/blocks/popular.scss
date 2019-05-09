@@ -1,0 +1,117 @@
+.popular {
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.popular-title {
+  margin-bottom: 60px;
+
+  @media (max-width: 840px) {
+    margin-bottom: 30px;
+  }
+}
+
+.popular-list {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 250px);
+  grid-row-gap: 50px;
+  
+  @media (max-width: 1080px) {
+    grid-template-columns: repeat(3, 250px);
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 810px) {
+    grid-template-columns: repeat(2, 250px);
+    grid-row-gap: 30px;    
+  }
+
+  @media (max-width: 570px) {
+    grid-template-columns: 250px;
+    justify-content: center;
+    grid-row-gap: 30px;    
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    margin-bottom: 60px;
+
+    @media (max-width: 840px) {
+      margin-bottom: 30px;
+    }
+
+    &::before {      
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+      content: "";         
+      width: 230px;
+      height: 285px;
+      background: $green-light;
+      transition: 0.2s;
+      //cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      top: calc(50% - 30px);
+      left: calc(50% - 72.5px);
+      content: "View Details";
+      color: white;
+      opacity: 0;
+      text-align: center;
+      width: 145px;
+      padding: 15px 0;
+      border: 1px solid white;
+      border-radius: 2px;
+      transition: 0.2s;
+      //cursor: pointer;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      &::before {
+        opacity: 0.9;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;    
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: 25px;
+    
+    @media (max-width: 840px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info-title {
+    font-weight: 400;    
+  }
+
+  &__info-outdoors {
+    font-weight: 400;
+    color: $text-light;
+  }
+
+  &__price {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: $text-grey;
+    font-weight: 200;
+  }
+}
+
+  
+
+  

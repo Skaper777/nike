@@ -897,6 +897,87 @@ p {
     color: #888888;
     font-weight: 200; }
 
+.pre-fall {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-auto-flow: column;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 130px; }
+  @media (max-width: 1050px) {
+    .pre-fall {
+      margin-top: 80px; } }
+  @media (max-width: 768px) {
+    .pre-fall {
+      margin-top: 60px; } }
+  @media (max-width: 600px) {
+    .pre-fall {
+      grid-auto-flow: row; } }
+  .pre-fall__textblock {
+    max-width: 570px;
+    margin-top: 60px;
+    margin-right: 20px; }
+    @media (max-width: 1050px) {
+      .pre-fall__textblock {
+        margin-top: 0; } }
+    @media (max-width: 600px) {
+      .pre-fall__textblock {
+        margin-right: 0;
+        margin-bottom: 30px; } }
+  .pre-fall__text {
+    margin-bottom: 50px; }
+    @media (max-width: 1050px) {
+      .pre-fall__text {
+        margin-bottom: 30px; } }
+  .pre-fall__imageblock {
+    position: relative; }
+    @media (max-width: 600px) {
+      .pre-fall__imageblock {
+        text-align: center; } }
+    .pre-fall__imageblock::before {
+      position: absolute;
+      right: -104px;
+      bottom: -104px;
+      content: "";
+      width: 284px;
+      height: 388px;
+      background-image: url("../img/prefall/bg.jpg");
+      z-index: -1; }
+      @media (max-width: 1050px) {
+        .pre-fall__imageblock::before {
+          width: 224px;
+          height: 328px;
+          right: -44px;
+          bottom: -44px; } }
+      @media (max-width: 768px) {
+        .pre-fall__imageblock::before {
+          width: 144px;
+          height: 148px;
+          right: -24px;
+          bottom: -24px; } }
+      @media (max-width: 600px) {
+        .pre-fall__imageblock::before {
+          display: none; } }
+    .pre-fall__imageblock img {
+      border: 8px solid white;
+      -webkit-box-shadow: 0 0 25px -20px;
+              box-shadow: 0 0 25px -20px; }
+      @media (max-width: 1050px) {
+        .pre-fall__imageblock img {
+          width: 400px; } }
+      @media (max-width: 768px) {
+        .pre-fall__imageblock img {
+          width: 300px; } }
+      @media (max-width: 600px) {
+        .pre-fall__imageblock img {
+          width: 270px; } }
+
 /**
  * Swiper 4.4.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions

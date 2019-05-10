@@ -1,0 +1,99 @@
+.pre-fall {  
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 130px;
+
+  @media (max-width: 1050px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 600px) {
+    grid-auto-flow: row;
+  }
+
+  &__textblock {
+    max-width: 570px;
+    margin-top: 60px;
+    margin-right: 20px;
+
+    @media (max-width: 1050px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 50px;
+
+    @media (max-width: 1050px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__imageblock {
+    position: relative;  
+    
+    @media (max-width: 600px) {
+      text-align: center;
+    }
+
+    &::before {
+      position: absolute;
+      right: -104px;
+      bottom: -104px;
+      content: "";        
+      width: 284px;
+      height: 388px;        
+      background-image: url("../img/prefall/bg.jpg");
+      z-index: -1;
+
+      @media (max-width: 1050px) {
+        width: 224px;
+        height: 328px;
+        right: -44px;
+        bottom: -44px;
+      }
+
+      @media (max-width: 768px) {
+        width: 144px;
+        height: 148px;
+        right: -24px;
+        bottom: -24px;
+      }
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    img {      
+      border: 8px solid white;
+      box-shadow: 0 0 25px -20px;
+
+      @media (max-width: 1050px) {
+        width: 400px;
+      }
+
+      @media (max-width: 768px) {
+        width: 300px;
+      }
+
+      @media (max-width: 600px) {
+        width: 270px;
+      }
+    }
+  }
+}

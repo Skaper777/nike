@@ -4,9 +4,10 @@
   justify-content: space-between;
   grid-auto-flow: column;
   max-width: 1170px;
-  padding: 0 20px;
+  padding: 0 20px;  
   margin: 0 auto;
   margin-top: 130px;
+  //overflow-x: hidden;
 
   @media (max-width: 1050px) {
     margin-top: 80px;

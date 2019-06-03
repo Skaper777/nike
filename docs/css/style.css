@@ -1067,6 +1067,7 @@ p {
   margin-bottom: 80px; }
 
 .blog-container {
+  display: grid;
   position: relative;
   width: 100%; }
 
@@ -1074,14 +1075,18 @@ p {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  opacity: 0; }
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
   .blog-slider__slide img {
     border: 5px solid white;
-    -webkit-box-shadow: 0 0 25px -20px;
-            box-shadow: 0 0 25px -20px; }
+    -webkit-box-shadow: 0 2px 25px -15px;
+            box-shadow: 0 2px 25px -15px; }
 
 .blog-slider .showing {
-  opacity: 1; }
+  opacity: 1;
+  z-index: 1; }
 
 .blog-slider__slide-textblock {
   display: grid;
@@ -1100,6 +1105,70 @@ p {
 .blog-slider__slide-btn {
   justify-self: flex-end;
   margin-top: 30px; }
+
+.blog-controls {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 500px;
+  justify-self: end;
+  font-size: 20px; }
+  .blog-controls__colors {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-right: 45px;
+    margin-right: 20px; }
+    .blog-controls__colors::after {
+      position: absolute;
+      right: 0;
+      top: calc(50% - 1px);
+      content: "";
+      width: 43px;
+      height: 2px;
+      background: #888888; }
+    .blog-controls__colors li {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      margin-right: 20px; }
+  .blog-controls__colors-black {
+    background: black; }
+  .blog-controls__colors-green {
+    background: #61e9c2; }
+  .blog-controls__colors-gray {
+    background: #e9e9e9; }
+  .blog-controls__pagination {
+    position: relative;
+    font-weight: 500;
+    margin-right: 20px;
+    padding-left: 50px; }
+    .blog-controls__pagination::before {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      content: "";
+      width: 17px;
+      height: 17px;
+      border: 6px solid #61e9c2;
+      border-radius: 100%; }
+  .blog-controls__arrows {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 2px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .blog-controls__arrows button {
+      color: #61e9c2;
+      background: none;
+      border: none;
+      cursor: pointer; }
+    .blog-controls__arrows .disabled {
+      color: black; }
 
 /**
  * Swiper 4.4.6

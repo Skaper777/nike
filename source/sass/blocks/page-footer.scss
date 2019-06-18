@@ -1,0 +1,44 @@
+.page-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__logo {
+    justify-self: left;
+  }
+
+  &__menu {
+    display: grid;   
+    grid-template-rows: repeat(6, auto);     
+    grid-auto-flow: column;
+    max-height: 160px;
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 400;    
+
+    a {
+      color: $text-grey;
+      line-height: 25px;
+      transition: 0.2s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: black;
+      }
+    }    
+  }
+
+  &__social {
+    display: grid;
+    grid-auto-flow: column;
+    font-size: 0;
+  }
+}

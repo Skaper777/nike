@@ -32,66 +32,7 @@
 
   &__logo {
     justify-self: start;
-    align-self: center;
-    position: relative;
-    padding-left: 50px;
-    color: $green;
-    font-size: 25px;
-    font-family: 'Ubuntu';
-    transition: 0.2s;
-
-    @media (max-width: 700px) {
-      font-size: 18px;
-      padding-left: 30px;
-    }
-
-    @media (max-width: 500px) {
-      color: $black;
-    }
-
-    span {
-      color: $black;
-      transition: 0.2s;
-
-      @media (max-width: 500px) {
-        color: white;
-      }
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $black;
-
-      @media (max-width: 500px) {
-        color: white;
-      }
-
-      span {
-        color: $green;
-
-        @media (max-width: 500px) {
-          color: $black;
-        }
-      }
-    }
-
-    &::before {
-      content: "";
-      background-image: url(../img/logo.png);
-      background-size: cover;
-      position: absolute;
-      width: 40px;
-      height: 36px;
-      top: -3px;
-      left: 0;
-
-      @media (max-width: 700px) {
-        width: 22px;
-        height: 20px;
-        top: 0;
-      }
-    }
+    align-self: center;    
   }
 
   &__menu {

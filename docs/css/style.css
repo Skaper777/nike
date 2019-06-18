@@ -363,6 +363,53 @@ p {
   font-style: normal;
   font-weight: 400; }
 
+.logo {
+  color: #61e9c2;
+  font-size: 25px;
+  font-family: 'Ubuntu';
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  padding-left: 50px; }
+  @media (max-width: 700px) {
+    .logo {
+      font-size: 18px;
+      padding-left: 30px; } }
+  @media (max-width: 500px) {
+    .logo {
+      color: #363639; } }
+  .logo span {
+    color: #363639;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    @media (max-width: 500px) {
+      .logo span {
+        color: white; } }
+  .logo:hover, .logo:active, .logo:focus {
+    color: #363639; }
+    @media (max-width: 500px) {
+      .logo:hover, .logo:active, .logo:focus {
+        color: white; } }
+    .logo:hover span, .logo:active span, .logo:focus span {
+      color: #61e9c2; }
+      @media (max-width: 500px) {
+        .logo:hover span, .logo:active span, .logo:focus span {
+          color: #363639; } }
+  .logo::before {
+    content: "";
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    top: -3px;
+    left: 0; }
+    @media (max-width: 700px) {
+      .logo::before {
+        width: 22px;
+        height: 20px;
+        top: 0; } }
+
 .page-header {
   position: relative;
   padding: 62px 0;
@@ -393,52 +440,7 @@ p {
   .page-header__logo {
     justify-self: start;
     -ms-flex-item-align: center;
-        align-self: center;
-    position: relative;
-    padding-left: 50px;
-    color: #61e9c2;
-    font-size: 25px;
-    font-family: 'Ubuntu';
-    -webkit-transition: 0.2s;
-    transition: 0.2s; }
-    @media (max-width: 700px) {
-      .page-header__logo {
-        font-size: 18px;
-        padding-left: 30px; } }
-    @media (max-width: 500px) {
-      .page-header__logo {
-        color: #363639; } }
-    .page-header__logo span {
-      color: #363639;
-      -webkit-transition: 0.2s;
-      transition: 0.2s; }
-      @media (max-width: 500px) {
-        .page-header__logo span {
-          color: white; } }
-    .page-header__logo:hover, .page-header__logo:active, .page-header__logo:focus {
-      color: #363639; }
-      @media (max-width: 500px) {
-        .page-header__logo:hover, .page-header__logo:active, .page-header__logo:focus {
-          color: white; } }
-      .page-header__logo:hover span, .page-header__logo:active span, .page-header__logo:focus span {
-        color: #61e9c2; }
-        @media (max-width: 500px) {
-          .page-header__logo:hover span, .page-header__logo:active span, .page-header__logo:focus span {
-            color: #363639; } }
-    .page-header__logo::before {
-      content: "";
-      background-image: url(../img/logo.png);
-      background-size: cover;
-      position: absolute;
-      width: 40px;
-      height: 36px;
-      top: -3px;
-      left: 0; }
-      @media (max-width: 700px) {
-        .page-header__logo::before {
-          width: 22px;
-          height: 20px;
-          top: 0; } }
+        align-self: center; }
   .page-header__menu {
     display: grid;
     -webkit-box-align: center;
@@ -581,6 +583,37 @@ p {
       @media (max-width: 1000px) {
         .page-header__footer-social li {
           margin-top: 20px; } }
+
+.page-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto; }
+  .page-footer__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .page-footer__logo {
+    justify-self: left; }
+  .page-footer__menu {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-auto-flow: column;
+    max-height: 160px;
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 400; }
+    .page-footer__menu a {
+      color: #888888;
+      line-height: 25px;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+      .page-footer__menu a:hover, .page-footer__menu a:active, .page-footer__menu a:focus {
+        color: black; }
+  .page-footer__social {
+    display: grid;
+    grid-auto-flow: column;
+    font-size: 0; }
 
 .submenu {
   display: grid;

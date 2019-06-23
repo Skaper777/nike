@@ -10,15 +10,50 @@
     padding: 50px 0;
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
+
+    @media (max-width: 1050px) {
+      padding: 30px 0;
+    }
+
+    @media (max-width: 840px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 350px) {
+      grid-template-columns: 51% 49%;
+    }
   }
 
   &__logo {
     justify-self: left;
+    align-self: start;
+
+    @media (max-width: 500px) {
+      color: $green;
+    }
+
+    span {  
+      @media (max-width: 500px) {
+        color: $black;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black; 
+  
+      span { 
+        @media (max-width: 500px) {
+          color: $green;
+        }
+      }
+    }
   }
 
   &__menu {
@@ -30,9 +65,38 @@
     margin-top: 2px;
     font-size: 15px;
     font-weight: 400;
+
+    @media (max-width: 1050px) {
+      font-size: 12px;
+      justify-content: start;
+    }
+
+    @media (max-width: 840px) {
+      grid-template-rows: repeat(3, auto);     
+      max-height: 100px;
+      justify-content: end;
+    }
+
+    @media (max-width: 430px) {
+      grid-template-rows: repeat(6, auto);     
+      max-height: 200px;      
+    }
     
     li {
       margin-left: 115px;
+
+      @media (max-width: 1200px) {
+        margin-left: 70px;
+      }
+
+      @media (max-width: 1020px) {
+        margin-left: 20px;
+      }
+
+      @media (max-width: 350px) {
+        margin-left: 10px;
+        text-align: right;
+      }
     }
 
     a {
@@ -50,7 +114,16 @@
 
   &__form {   
     display: grid;
-    justify-content: end;        
+    justify-content: end;     
+    
+    @media (max-width: 840px) {
+      justify-content: center;   
+      margin-top: 20px;  
+    }
+
+    @media (max-width: 460px) {     
+      justify-content: left;
+    }
   }
 
   &__form-title {    
@@ -58,6 +131,14 @@
     line-height: 25px;
     font-weight: 400;
     color: $text-grey; 
+
+    @media (max-width: 1050px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 840px) {
+      margin-bottom: 10px;  
+    }
   }
 
   &__form-email {
@@ -66,6 +147,16 @@
     grid-template-columns: 302px 145px;
     grid-column-gap: 7px;    
     align-content: center;
+
+    @media (max-width: 1050px) {
+      width: 400px;    
+      grid-column-gap: 0;    
+      grid-template-columns: 66% 33%;
+    }
+
+    @media (max-width: 460px) {     
+      width: 100%;      
+    }
 
     input {
       display: block;
@@ -79,6 +170,21 @@
 
       &::placeholder {
         color: $text-light;
+      }
+
+      @media (max-width: 1050px) {
+        font-size: 13px;        
+        height: 38px;    
+      }
+
+      @media (max-width: 840px) {
+        margin-bottom: 15px;  
+        width: auto;
+        padding: 0 10px;
+      }
+
+      @media (max-width: 400px) {     
+        width: 150px;
       }
     }
 
@@ -95,7 +201,8 @@
 
       @media (max-width: 1050px) {
         font-size: 13px;
-        width: 115px;        
+        width: 115px;    
+        height: 38px;    
       }
 
       &:hover,
@@ -132,6 +239,10 @@
       width: 18px;
       transition: 0.2s;
       fill: #666666;
+
+      @media (max-width: 1050px) {
+        width: 15px;  
+      }
     }
   }
 
@@ -149,6 +260,11 @@
     &:active,
     &:focus {
       color: black;   
+    }
+
+    @media (max-width: 1050px) {
+      font-size: 12px;
+      margin: 15px 0;
     }
   }  
 }

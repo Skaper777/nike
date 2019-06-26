@@ -1,4 +1,44 @@
 .submenu {
+  position: relative;  
+  
+  &--active {
+    .submenu-btn {
+      width: 51px;
+      height: 51px;
+      background: black;      
+
+      div {
+        opacity: 1;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: white;
+        border-color: white;
+        transform: scale(1);
+
+        div {
+          background: black;          
+        }
+      }
+
+      @media (max-width: 700px) {
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+
+  &:first-of-type {
+    .submenu-list {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+
+.submenu-btn {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -15,7 +55,6 @@
     height: 7px;
   }
 
-
   &:hover,
   &:active,
   &:focus {
@@ -24,56 +63,57 @@
     background: white;
   }
 
-  &--active {
-    width: 51px;
-    height: 51px;
-    background: black;
+  div {
+    opacity: 0;
+    width: 15px;
+    height: 2px;
+    background: white;    
+  }
+
+  div:first-of-type {
+    margin-bottom: 4px;
+  }
+
+  div:last-of-type {
+    margin-top: 4px;
+  }  
+}
+
+.submenu-list {
+  opacity: 0;
+  z-index: -50;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px -10px;
+  transition: 0.2s;
+
+  @media (max-width: 700px) {
+    top: 50px;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    padding: 15px 15px;
+    font-size: 15px;
+    color: $text-grey;
+    transition: 0.2s;
 
     &:hover,
     &:active,
     &:focus {
-      background: white;
-      border-color: white;
-      transform: scale(1);
-
-      .submenu-btn {
-        div {
-          background: black;
-        }
-      }
+      color: black;
     }
 
-    .submenu-btn {
-      opacity: 1;
-      width: 17px;
-      height: 14px;
-      left: calc(50% - 8.5px);
-
-      div {
-        background: white;
-        border-radius: 1px;
-        height: 2px;
-        margin-bottom: 3px;
-        transition: 0.2s;
-      }
-    }
-
-    @media (max-width: 700px) {
-      width: 41px;
-      height: 41px;
+    @media (max-width: 1050px) {
+      font-size: 12px;
+      padding: 12px 15px;
     }
   }
-
-
-}
-
-.submenu-btn {
-  transition: 0.2s;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.submenu-list {
-  display: none;
 }

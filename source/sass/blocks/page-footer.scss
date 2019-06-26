@@ -1,8 +1,8 @@
-.page-footer {  
+.page-footer {
   display: grid;
   max-width: 1170px;
   padding: 0 20px;
-  margin: 0 auto;  
+  margin: 0 auto;
 
   &__wrapper {
     display: grid;
@@ -37,7 +37,7 @@
       color: $green;
     }
 
-    span {  
+    span {
       @media (max-width: 500px) {
         color: $black;
       }
@@ -46,9 +46,9 @@
     &:hover,
     &:active,
     &:focus {
-      color: $black; 
-  
-      span { 
+      color: $black;
+
+      span {
         @media (max-width: 500px) {
           color: $green;
         }
@@ -57,8 +57,8 @@
   }
 
   &__menu {
-    display: grid;   
-    grid-template-rows: repeat(6, auto);     
+    display: grid;
+    grid-template-rows: repeat(6, auto);
     grid-auto-flow: column;
     justify-content: end;
     max-height: 160px;
@@ -72,16 +72,16 @@
     }
 
     @media (max-width: 840px) {
-      grid-template-rows: repeat(3, auto);     
+      grid-template-rows: repeat(3, auto);
       max-height: 100px;
       justify-content: end;
     }
 
     @media (max-width: 430px) {
-      grid-template-rows: repeat(6, auto);     
-      max-height: 200px;      
+      grid-template-rows: repeat(6, auto);
+      max-height: 200px;
     }
-    
+
     li {
       margin-left: 115px;
 
@@ -109,35 +109,35 @@
       &:focus {
         color: black;
       }
-    }    
+    }
   }
 
-  &__form {   
+  &__form {
     display: grid;
-    justify-content: end;     
-    
+    justify-content: end;
+
     @media (max-width: 840px) {
-      justify-content: center;   
-      margin-top: 20px;  
+      justify-content: center;
+      margin-top: 20px;
     }
 
-    @media (max-width: 460px) {     
+    @media (max-width: 460px) {
       justify-content: left;
     }
   }
 
-  &__form-title {    
+  &__form-title {
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
-    color: $text-grey; 
+    color: $text-grey;
 
     @media (max-width: 1050px) {
       font-size: 12px;
     }
 
     @media (max-width: 840px) {
-      margin-bottom: 10px;  
+      margin-bottom: 10px;
     }
   }
 
@@ -145,17 +145,17 @@
     width: 460px;
     display: grid;
     grid-template-columns: 302px 145px;
-    grid-column-gap: 7px;    
+    grid-column-gap: 7px;
     align-content: center;
 
     @media (max-width: 1050px) {
-      width: 400px;    
-      grid-column-gap: 0;    
+      width: 400px;
+      grid-column-gap: 0;
       grid-template-columns: 66% 33%;
     }
 
-    @media (max-width: 460px) {     
-      width: 100%;      
+    @media (max-width: 460px) {
+      width: 100%;
     }
 
     input {
@@ -173,17 +173,17 @@
       }
 
       @media (max-width: 1050px) {
-        font-size: 13px;        
-        height: 38px;    
+        font-size: 13px;
+        height: 38px;
       }
 
       @media (max-width: 840px) {
-        margin-bottom: 15px;  
+        margin-bottom: 15px;
         width: auto;
         padding: 0 10px;
       }
 
-      @media (max-width: 400px) {     
+      @media (max-width: 400px) {
         width: 150px;
       }
     }
@@ -191,31 +191,31 @@
     button {
       justify-self: end;
       background: $green-light;
-      border: none;      
+      border: none;
       width: 145px;
       height: 46px;
-      color: #363639;      
+      color: #363639;
       position: relative;
       transition: 0.2s;
       cursor: pointer;
 
       @media (max-width: 1050px) {
         font-size: 13px;
-        width: 115px;    
-        height: 38px;    
+        width: 115px;
+        height: 38px;
       }
 
       &:hover,
       &:active,
       &:focus {
-        background: white;  
-        outline: 1px solid black;   
+        background: white;
+        outline: 1px solid black;
       }
     }
   }
 
   &__social {
-    align-items: end; 
+    align-items: end;
     justify-content: left;
     display: grid;
     grid-auto-flow: column;
@@ -241,7 +241,7 @@
       fill: #666666;
 
       @media (max-width: 1050px) {
-        width: 15px;  
+        width: 15px;
       }
     }
   }
@@ -259,12 +259,12 @@
     &:hover,
     &:active,
     &:focus {
-      color: black;   
+      color: black;
     }
 
     @media (max-width: 1050px) {
       font-size: 12px;
       margin: 15px 0;
     }
-  }  
+  }
 }

@@ -23,20 +23,20 @@
 
   let slidesArr = [];
   let currentSlide = 0;
-  
+
   totalNum.textContent = '0' + slides.length;
 
   for (let i = 0; i < slides.length; i++) {
-    slidesArr[i] = slides[i];  
-  }  
+    slidesArr[i] = slides[i];
+  }
 
   buttonRight.addEventListener('click', function () {
-    if (currentSlide < slidesArr.length - 1) {     
+    if (currentSlide < slidesArr.length - 1) {
       slides[currentSlide].classList.remove('showing');
-      currentNum.textContent = '0' + ((currentSlide + 1) + 1);      
+      currentNum.textContent = '0' + ((currentSlide + 1) + 1);
       currentSlide += 1;
       slides[currentSlide].classList.add('showing');
-    }  
+    }
 
     if (currentSlide === (slides.length - 1)) {
       buttonRight.classList.add('disabled');
@@ -46,15 +46,15 @@
     }
   });
 
-  buttonLeft.addEventListener('click', function () {  
-    if (currentSlide > 0) {          
+  buttonLeft.addEventListener('click', function () {
+    if (currentSlide > 0) {
       slidesArr[currentSlide].classList.remove('showing');
       currentNum.textContent = '0' + ((currentSlide + 1) - 1);
-      currentSlide -= 1;      
+      currentSlide -= 1;
       slidesArr[currentSlide].classList.add('showing');
-      buttonRight.classList.remove('disabled');     
+      buttonRight.classList.remove('disabled');
     } else if (currentSlide === 0) {
       buttonLeft.classList.add('disabled');
-    }    
+    }
   });
 })();

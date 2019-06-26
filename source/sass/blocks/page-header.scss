@@ -126,6 +126,10 @@
     @media (max-width: 600px) {
       border: 1px solid black;
     }
+
+    @media (max-width: 500px) {
+      z-index: 1;
+    }
   }
 
   &__slider {
@@ -184,7 +188,7 @@
   &__footer-social {
     justify-self: end;
     margin: 0;
-    z-index: 2;
+    z-index: 1;
 
     svg {
       width: 52px;

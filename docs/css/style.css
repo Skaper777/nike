@@ -513,6 +513,9 @@ p {
     @media (max-width: 600px) {
       .page-header__brand-link {
         border: 1px solid black; } }
+    @media (max-width: 500px) {
+      .page-header__brand-link {
+        z-index: 1; } }
   .page-header__slider {
     position: absolute;
     top: 220px;
@@ -559,7 +562,7 @@ p {
   .page-header__footer-social {
     justify-self: end;
     margin: 0;
-    z-index: 2; }
+    z-index: 1; }
     .page-header__footer-social svg {
       width: 52px;
       height: 52px;
@@ -801,6 +804,29 @@ p {
         margin: 15px 0; } }
 
 .submenu {
+  position: relative; }
+  .submenu--active .submenu-btn {
+    width: 51px;
+    height: 51px;
+    background: black; }
+    .submenu--active .submenu-btn div {
+      opacity: 1; }
+    .submenu--active .submenu-btn:hover, .submenu--active .submenu-btn:active, .submenu--active .submenu-btn:focus {
+      background: white;
+      border-color: white;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+      .submenu--active .submenu-btn:hover div, .submenu--active .submenu-btn:active div, .submenu--active .submenu-btn:focus div {
+        background: black; }
+    @media (max-width: 700px) {
+      .submenu--active .submenu-btn {
+        width: 41px;
+        height: 41px; } }
+  .submenu:first-of-type .submenu-list {
+    opacity: 1;
+    z-index: 1; }
+
+.submenu-btn {
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -816,51 +842,54 @@ p {
   transition: 0.2s;
   cursor: pointer; }
   @media (max-width: 700px) {
-    .submenu {
+    .submenu-btn {
       width: 7px;
       height: 7px; } }
-  .submenu:hover, .submenu:active, .submenu:focus {
+  .submenu-btn:hover, .submenu-btn:active, .submenu-btn:focus {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
     border-color: white;
     background: white; }
-  .submenu--active {
-    width: 51px;
-    height: 51px;
-    background: black; }
-    .submenu--active:hover, .submenu--active:active, .submenu--active:focus {
-      background: white;
-      border-color: white;
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-      .submenu--active:hover .submenu-btn div, .submenu--active:active .submenu-btn div, .submenu--active:focus .submenu-btn div {
-        background: black; }
-    .submenu--active .submenu-btn {
-      opacity: 1;
-      width: 17px;
-      height: 14px;
-      left: calc(50% - 8.5px); }
-      .submenu--active .submenu-btn div {
-        background: white;
-        border-radius: 1px;
-        height: 2px;
-        margin-bottom: 3px;
-        -webkit-transition: 0.2s;
-        transition: 0.2s; }
-    @media (max-width: 700px) {
-      .submenu--active {
-        width: 41px;
-        height: 41px; } }
-
-.submenu-btn {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  opacity: 0;
-  width: 0;
-  height: 0; }
+  .submenu-btn div {
+    opacity: 0;
+    width: 15px;
+    height: 2px;
+    background: white; }
+  .submenu-btn div:first-of-type {
+    margin-bottom: 4px; }
+  .submenu-btn div:last-of-type {
+    margin-top: 4px; }
 
 .submenu-list {
-  display: none; }
+  opacity: 0;
+  z-index: -50;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px -10px;
+          box-shadow: 0 0 20px -10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  @media (max-width: 700px) {
+    .submenu-list {
+      top: 50px; } }
+  .submenu-list li {
+    text-align: center; }
+  .submenu-list a {
+    display: block;
+    padding: 15px 15px;
+    font-size: 15px;
+    color: #888888;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .submenu-list a:hover, .submenu-list a:active, .submenu-list a:focus {
+      color: black; }
+    @media (max-width: 1050px) {
+      .submenu-list a {
+        font-size: 12px;
+        padding: 12px 15px; } }
 
 .main-slider__slide {
   text-align: center; }

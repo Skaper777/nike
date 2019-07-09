@@ -804,7 +804,15 @@ p {
         margin: 15px 0; } }
 
 .submenu {
-  position: relative; }
+  position: relative;
+  /*
+  &:first-of-type {
+    .submenu-list {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  */ }
   .submenu--active .submenu-btn {
     width: 51px;
     height: 51px;
@@ -822,9 +830,6 @@ p {
       .submenu--active .submenu-btn {
         width: 41px;
         height: 41px; } }
-  .submenu:first-of-type .submenu-list {
-    opacity: 1;
-    z-index: 1; }
 
 .submenu-btn {
   display: grid;
@@ -1514,6 +1519,103 @@ p {
       cursor: pointer; }
     .blog-controls__arrows .disabled {
       color: black; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -50;
+  background: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .modal--opened {
+    opacity: 1;
+    z-index: 50; }
+
+.modal-popup {
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  padding: 25px 15px;
+  width: 350px;
+  min-width: 320px;
+  background: white;
+  border-radius: 5px; }
+  @media (max-width: 1024px) {
+    .modal-popup {
+      margin-top: 100px; } }
+  @media (max-width: 600px) {
+    .modal-popup {
+      margin: 0;
+      padding-top: 50px;
+      width: 100%;
+      height: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 0; } }
+
+.modal-header {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .modal-header__title {
+    margin: 0; }
+  .modal-header__close {
+    position: relative;
+    justify-self: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #61e9c2;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    cursor: pointer; }
+    .modal-header__close::after, .modal-header__close::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 5px;
+      width: 25px;
+      height: 1px;
+      background: black; }
+    .modal-header__close::after {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .modal-header__close::before {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .modal-header__close:hover, .modal-header__close:active, .modal-header__close:focus {
+      background: white; }
+
+.modal-form {
+  display: grid;
+  grid-auto-flow: row;
+  margin-top: 25px; }
+  .modal-form__label {
+    margin-bottom: 10px; }
+  .modal-form__input {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9; }
+  .modal-form__btn {
+    margin: 10px auto;
+    border: none;
+    background: #61e9c2;
+    height: 46px;
+    width: 145px;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .modal-form__btn:hover, .modal-form__btn:active, .modal-form__btn:focus {
+      background: white;
+      outline: 1px solid black; }
 
 /**
  * Swiper 4.4.6

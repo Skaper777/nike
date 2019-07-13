@@ -39,8 +39,13 @@
     display: grid;
     align-items: center;
     justify-self: end;
+    min-height: 55px;
     grid-auto-flow: column;
     z-index: 2;
+
+    @media (max-width: 700px) {
+      min-height: 45px;
+    }
   }
 
   &__brand {
